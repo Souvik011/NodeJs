@@ -1,0 +1,24 @@
+{
+  "name": "my-frist-node-project",
+  "version": "1.0.0",
+  "description": "Node learnings",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Souvik011/NodeJs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Souvik011/NodeJs/issues"
+  },
+  "homepage": "https://github.com/Souvik011/NodeJs#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
