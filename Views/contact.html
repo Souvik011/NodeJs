@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contect Us</title>
+    <link rel="stylesheet" href="/css/contact.css">
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a href="/">Shop</a></li>
+                <li class="main-header__item"><a href="/add-product">Add Product</a></li>
+                <li class="main-header__item"><a class="active" href="/contactus">Contect Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-control">
+            <form class="main-form" action="/success" method="POST">
+                <div class="main-info">
+                    <h2>Book a Call</h2>
+                    <p>Book a Slot and Our Represantative will call you within the selected Time</p>
+                </div>
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+                <label for="number">Phone</label>
+                <input type="number" name="number" id="number">
+                <label for="number">Time For Call</label>
+                <div class="time">
+                    <input type="date" name="date" id="date">
+                    <input type="time" name="time" id="time">
+                </div>
+                <button type="submit">Book a Call</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

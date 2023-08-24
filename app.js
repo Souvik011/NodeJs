@@ -1,25 +1,27 @@
 const http = require('http');
+const path =  require('path');
 
 const express = require('express');
 const bodyParser = require('body-parser');
 
 const app = express();
 
+
 const adminRoutes = require('./Routes/admin');
 const shopRoutes = require('./Routes/shop');
+const contactRoutes = require('./Routes/contact');
 
 app.use(bodyParser.urlencoded({extended:false}));
+app.use(express.static(path.join(__dirname,'Public')));
 
-app.use("/admin",adminRoutes);
+app.use(adminRoutes);
 
-app.use("/shop",shopRoutes);
+app.use(shopRoutes);
 
-app.get("/",(req,res,next) => {
-    res.send('<h1 >Hello from Express </h1>');
-});
+app.use(contactRoutes);
 
 app.use((req,res,next)=>{
-    res.status(404).send('<h1>There is Some ERROR IN LOADING</h1>');
+    res.status(404).sendFile(path.join(__dirname,'Views','404.html'));
 });
 
 app.listen(4000);
